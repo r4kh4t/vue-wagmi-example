@@ -26,9 +26,14 @@ createWeb3Modal({
 
 // 4. Use modal composable
 const modal = useWeb3Modal()
+
+const handleClick = () => {
+  modal.open()
+}
 </script>
 
 <template>
-  <button @click="modal.open()">Open Connect Modal</button>
+  <button @click="handleClick">Open Connect Modal 1</button>
+  <button @click="modal.open()">Open Connect Modal 2</button>
   <button @click="modal.open({ view: 'Networks' })">Open Network Modal</button>
 </template>
